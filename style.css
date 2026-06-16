@@ -1,43 +1,48 @@
- 
- body {
-    background-color: #F5F3E4;
+body {
+  background-color: #f5f3e4;
 }
 h1 {
-    color: #F5F3E4;
-    text-align: center;
-    margin: 0;
-    padding: 2%;
-    background-color: #8E6BAE;
+  color: #f5f3e4;
+  text-align: center;
+  margin: 0;
+  padding: 2%;
+  background-color: #8e6bae;
 }
 .conteiner {
-    text-align: center;
-    position: fixed;
-    bottom: 50px;
-    width: 100%
-    
+  text-align: center;
+  position: fixed;
+  bottom: 50px;
+  width: 100%;
+}
+.img_tutor {
+  justify-content: flex-start;
+  margin: 0;
+}
+.img_vet {
+  justify-content: flex-end;
+  margin: 0;
 }
 button {
-    border: none;
-    outline: none;
-    border-radius: 10%;
-    color: #F5F3E4;
-    height: 60px;
-    width: 100px;
-    background-color: #8E6BAE;
+  border: none;
+  outline: none;
+  border-radius: 10%;
+  color: #f5f3e4;
+  height: 60px;
+  width: 100px;
+  background-color: #8e6bae;
 }
 
 button:hover {
-    color: #585641;
-    background-color: #dfbdff;
+  color: #585641;
+  background-color: #dfbdff;
 }
 
 .falas_tutor {
-    color: #2b8628;
-    text-align: left;
+  color: #2b8628;
+  text-align: left;
 }
 
-
 .falas_vet {
-    color: #5c2886;
-    text-align: right;
+  color: #5c2886;
+  text-align: right;
 }
