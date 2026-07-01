@@ -1,37 +1,576 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/p5.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.13/lib/addons/p5.sound.min.js"></script>
-    
-    
-    
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta charset="utf-8" />
+<html lang="pt-BR">
 
-  </head>
-  <body>
-    <main>
-        <h1>A JORNADA DO NUPI</h1>
+<head>
+  <meta charset="UTF-8">
 
-        <div class="falas_tutor">
-            <p>TUTOR:</p>
-            <p>Cara, resgatei o Nupi faz uns dias, mas o bicho só vive assustado. O antigo dono deixava ele trancado numa gaiola minúscula e só dava cenoura.</p>
-        </div>
-         <div class="falas_vet">
-            <P>VETERINÁRIO:</P>
-            <p>Vixe, aí é osso. O pessoal cai muito nesses mitos e acha que coelho é bicho de pelúcia. Gaiola estressa e cenoura direto faz mal. É por isso que ele cresceu doente e com medo de tudo.</p>
-        </div>
-        <div class="img_tutor"><img src="/src/tutor.png" alt="">
-        </div>
-        <div class="img_vet"><img src="/src/vet.png" alt="">
-        </div>
-        <div class="conteiner">
-        <button >Voltar</button>
-        <button >Avançar</button> 
-        </div>
-    </main>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
-    <script src="sketch.js"></script>
-  </body>
+  <meta
+    name="description"
+    content="Site educativo sobre os cuidados necessários com coelhos."
+  >
+
+  <meta
+    name="keywords"
+    content="coelho, cuidados, tutor, veterinária, Nupi"
+  >
+
+  <meta
+    name="author"
+    content="Adilson Júnior, Dandara Soares"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+  <script src="sketch.js"></script>
+
+  <title>A Jornada do Nupi</title>
+</head>
+
+<body>
+
+  <header class="topo">
+    <h1>A Jornada do Nupi</h1>
+  </header>
+
+  <main class="conteudo">
+
+    <section
+      id="tela_00"
+      class="tela tela-inicial ativa"
+      aria-labelledby="titulo-tela-00"
+    >
+
+      <div class="apresentacao">
+
+        <p class="identificacao-etapa">
+          Início
+        </p>
+
+        <h2 id="titulo-tela-00">
+          Aprendendo a cuidar de um coelho com responsabilidade
+        </h2>
+
+        <p>
+          Nupi foi resgatado depois de viver em condições inadequadas.
+          Agora, seu novo tutor precisa aprender como oferecer a ele um
+          ambiente seguro, uma alimentação adequada e os cuidados necessários.
+        </p>
+
+        <img
+          src="img/tut_01.png"
+          alt="Tutor segurando o coelho Nupi"
+          class="imagem-apresentacao"
+        >
+
+        <button
+          id="btn-comecar"
+          class="botao botao-comecar"
+          type="button"
+        >
+          Começar a jornada
+        </button>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_01"
+      class="tela"
+      aria-labelledby="titulo-tela-01"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 1 de 6
+        </p>
+
+        <h2 id="titulo-tela-01">
+          O resgate de Nupi
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Doutora, resgatei o Nupi faz alguns dias, mas ele vive
+              assustado. O antigo dono deixava ele preso numa gaiola muito
+              pequena e oferecia quase só cenoura.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              Entendo. Vamos examiná-lo. Muita gente acredita que gaiola e
+              cenoura são suficientes, mas coelhos precisam de espaço,
+              segurança e uma alimentação adequada. Essas condições podem ter
+              contribuído para o medo e para os problemas de saúde dele.
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária durante a consulta de Nupi"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_02"
+      class="tela"
+      aria-labelledby="titulo-tela-02"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 2 de 6
+        </p>
+
+        <h2 id="titulo-tela-02">
+          O ambiente
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Sério? Eu achava que a cenoura era suficiente! O que eu preciso
+              mudar no ambiente dele?
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              O ideal é que ele tenha um espaço cercado ou um cômodo seguro
+              para correr e gastar energia. Quando fica assustado, o Nupi
+              costuma procurar algum lugar para se esconder?
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária conversando com o tutor"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_03"
+      class="tela"
+      aria-labelledby="titulo-tela-03"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 3 de 6
+        </p>
+
+        <h2 id="titulo-tela-03">
+          Segurança e manejo
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Sim. Ele se encolhe num canto e parece não saber para onde ir.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              Então prepare um cantinho calmo com uma toca para ele se
+              proteger. Coloque também brinquedos de madeira próprios para
+              coelhos. E, ao segurá-lo, apoie bem o corpo e não force quando
+              ele estiver com medo.
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária explicando os cuidados com Nupi"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_04"
+      class="tela"
+      aria-labelledby="titulo-tela-04"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 4 de 6
+        </p>
+
+        <h2 id="titulo-tela-04">
+          A alimentação
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Caramba, faz sentido. Então a toca vai ajudar o Nupi a se sentir
+              seguro. E sobre a comida? O que eu dou no lugar da cenoura?
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              A base da alimentação deve ser o feno de capim, que precisa
+              ficar disponível o dia inteiro.
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária explicando a alimentação de Nupi"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_05"
+      class="tela"
+      aria-labelledby="titulo-tela-05"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 5 de 6
+        </p>
+
+        <h2 id="titulo-tela-05">
+          Ração e vegetais
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Feno o dia todo? Mas e a ração?
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              A ração peletizada entra sim, mas em porções controladas.
+              Folhas verdes escuras, bem lavadas, podem complementar a
+              alimentação, e a cenoura deve ser oferecida apenas de vez em
+              quando.
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária orientando o tutor sobre a alimentação"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <section
+      id="tela_06"
+      class="tela"
+      aria-labelledby="titulo-tela-06"
+    >
+
+      <div class="informacoes-etapa">
+
+        <p class="identificacao-etapa">
+          Etapa 6 de 6
+        </p>
+
+        <h2 id="titulo-tela-06">
+          Continuando a aprendizagem
+        </h2>
+
+      </div>
+
+      <div class="personagens">
+
+        <article class="personagem personagem-tutor">
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/tut_01.png"
+              alt="Tutor segurando o coelho Nupi"
+            >
+
+          </div>
+
+          <div class="personagem-conteudo">
+
+            <h3>Tutor:</h3>
+
+            <p>
+              Entendi: feno o dia inteiro, ração controlada e folhas verdes
+              para complementar. Caraca, eu estava fazendo muita coisa errada.
+              Como eu aprendo a cuidar dele direito para não vacilar mais?
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="personagem personagem-veterinaria">
+
+          <div class="personagem-conteudo">
+
+            <h3>Veterinária:</h3>
+
+            <p>
+              O segredo é continuar observando o Nupi, conversando com
+              profissionais e trocando experiências com outros tutores.
+              Inclusive, vai rolar o I Encontro de Tutores de Coelhos do
+              Ceará, aqui em Fortaleza. Antes disso, topa analisar algumas
+              situações e decidir como você cuidaria dele?
+            </p>
+
+          </div>
+
+          <div class="personagem-imagem">
+
+            <img
+              src="img/vet_01.png"
+              alt="Veterinária convidando o tutor para continuar aprendendo"
+            >
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+    <nav
+      class="controles"
+      aria-label="Navegação da história"
+    >
+
+      <button
+        id="btn-voltar"
+        class="botao botao-navegacao"
+        type="button"
+        disabled
+      >
+        Voltar
+      </button>
+
+      <button
+        id="btn-avancar"
+        class="botao botao-navegacao"
+        type="button"
+      >
+        Avançar
+      </button>
+
+      <button
+        id="btn-desafio"
+        class="botao botao-desafio"
+        type="button"
+        disabled
+      >
+        Desafio
+      </button>
+
+    </nav>
+
+  </main>
+
+</body>
+
 </html>
