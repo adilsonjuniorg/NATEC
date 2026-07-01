@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Desafio interativo sobre alimentação, manejo e ambiente adequado para coelhos."
+  >
+
+  <meta
+    name="keywords"
+    content="coelho, Nupi, alimentação, manejo, ambiente, desafio"
+  >
+
+  <meta
+    name="author"
+    content="Adilson Júnior, Dandara Soares"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS principal já utilizado na Jornada do Nupi -->
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <!-- CSS específico dos desafios -->
+  <link
+    rel="stylesheet"
+    href="desafio.css"
+  >
+
+  <title>Desafios | A Jornada do Nupi</title>
+</head>
+
+<body>
+
+  <header class="topo">
+    <h1>A Jornada do Nupi</h1>
+  </header>
+
+  <main class="conteudo conteudo-desafio">
+
+    <!-- =====================================================
+         DESAFIO 1 — ALIMENTAÇÃO
+    ====================================================== -->
+
+    <section
+      id="desafio_01"
+      class="tela-desafio ativa"
+      aria-labelledby="titulo-desafio-01"
+    >
+
+      <div class="informacoes-desafio">
+
+        <p class="identificacao-desafio">
+          Desafio 1 de 3
+        </p>
+
+        <h2 id="titulo-desafio-01">
+          Alimentação
+        </h2>
+
+        <p class="situacao-desafio">
+          Está na hora de organizar a alimentação do Nupi.
+          Entre as três opções abaixo, qual alimento deve ficar
+          disponível para ele durante todo o dia?
+        </p>
+
+      </div>
+
+      <div
+        class="opcoes-desafio"
+        role="group"
+        aria-label="Escolha o alimento adequado para Nupi"
+      >
+
+        <!-- Opção incorreta: ração -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-alimentacao-racao"
+          aria-label="Escolher pote cheio de ração"
+        >
+
+          <img
+            src="img/desafio_alimentacao_racao.png"
+            alt="Pote cheio de ração peletizada"
+          >
+
+          <span class="nome-opcao">
+            Ração peletizada
+          </span>
+
+        </button>
+
+        <!-- Opção incorreta: cenoura -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-alimentacao-cenoura"
+          aria-label="Escolher cenouras"
+        >
+
+          <img
+            src="img/desafio_alimentacao_cenoura.png"
+            alt="Porção de cenouras"
+          >
+
+          <span class="nome-opcao">
+            Cenoura
+          </span>
+
+        </button>
+
+        <!-- Opção correta: feno -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="correta"
+          data-feedback="feedback-alimentacao-feno"
+          aria-label="Escolher feno de capim"
+        >
+
+          <img
+            src="img/desafio_alimentacao_feno.png"
+            alt="Porção de feno de capim"
+          >
+
+          <span class="nome-opcao">
+            Feno de capim
+          </span>
+
+        </button>
+
+      </div>
+
+      <div class="mediacao-nupi">
+
+        <div class="nupi-personagem">
+
+          <img
+            class="imagem-nupi"
+            src="img/nupi_curioso.png"
+            alt="Nupi curioso, aguardando a resposta"
+          >
+
+        </div>
+
+        <div
+          class="area-feedback"
+          aria-live="polite"
+        >
+
+          <p class="mensagem-inicial">
+            Observe as opções com atenção e escolha como você
+            organizaria a alimentação do Nupi.
+          </p>
+
+          <div
+            id="feedback-alimentacao-racao"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              A ração peletizada faz parte da alimentação do Nupi,
+              mas deve ser oferecida em porções controladas. Deixar
+              o pote cheio durante todo o dia pode fazer com que ele
+              consuma mais ração do que precisa.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              procure o alimento que ajuda no funcionamento do sistema
+              digestivo e no desgaste natural dos dentes.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-alimentacao-cenoura"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              A cenoura não deve ser a base da alimentação. Ela contém
+              bastante açúcar e deve ser oferecida apenas ocasionalmente,
+              em pequenas quantidades.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              pense em um alimento rico em fibras que o coelho possa
+              mastigar ao longo de todo o dia.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-alimentacao-feno"
+            class="feedback feedback-correto"
+            hidden
+          >
+
+            <h3>Muito bem!</h3>
+
+            <p>
+              O feno de capim é a base da alimentação do Nupi e deve
+              permanecer disponível durante todo o dia. Ele é rico em
+              fibras, contribui para o funcionamento adequado do sistema
+              digestivo e ajuda no desgaste dos dentes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         DESAFIO 2 — MANEJO
+    ====================================================== -->
+
+    <section
+      id="desafio_02"
+      class="tela-desafio"
+      aria-labelledby="titulo-desafio-02"
+      aria-hidden="true"
+    >
+
+      <div class="informacoes-desafio">
+
+        <p class="identificacao-desafio">
+          Desafio 2 de 3
+        </p>
+
+        <h2 id="titulo-desafio-02">
+          Como segurar o Nupi
+        </h2>
+
+        <p class="situacao-desafio">
+          O Nupi precisa ser retirado da mesa com segurança.
+          Entre as três opções abaixo, qual é a maneira mais
+          adequada de segurá-lo?
+        </p>
+
+      </div>
+
+      <div
+        class="opcoes-desafio"
+        role="group"
+        aria-label="Escolha a maneira adequada de segurar Nupi"
+      >
+
+        <!-- Opção incorreta: orelhas -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-manejo-orelhas"
+          aria-label="Segurar Nupi pelas orelhas"
+        >
+
+          <img
+            src="img/desafio_manejo_orelhas.png"
+            alt="Pessoa tentando levantar o coelho pelas orelhas"
+          >
+
+          <span class="nome-opcao">
+            Pelas orelhas
+          </span>
+
+        </button>
+
+        <!-- Opção incorreta: parte da frente -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-manejo-frente"
+          aria-label="Levantar Nupi apenas pela parte da frente do corpo"
+        >
+
+          <img
+            src="img/desafio_manejo_frente.png"
+            alt="Pessoa levantando o coelho sem apoiar as patas traseiras"
+          >
+
+          <span class="nome-opcao">
+            Apenas pela parte da frente
+          </span>
+
+        </button>
+
+        <!-- Opção correta -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="correta"
+          data-feedback="feedback-manejo-correto"
+          aria-label="Apoiar o peito e as patas traseiras de Nupi"
+        >
+
+          <img
+            src="img/desafio_manejo_correto.png"
+            alt="Pessoa segurando o coelho com o corpo completamente apoiado"
+          >
+
+          <span class="nome-opcao">
+            Com o corpo apoiado
+          </span>
+
+        </button>
+
+      </div>
+
+      <div class="mediacao-nupi">
+
+        <div class="nupi-personagem">
+
+          <img
+            class="imagem-nupi"
+            src="img/nupi_curioso.png"
+            alt="Nupi curioso, aguardando a resposta"
+          >
+
+        </div>
+
+        <div
+          class="area-feedback"
+          aria-live="polite"
+        >
+
+          <p class="mensagem-inicial">
+            Observe como o corpo do Nupi está apoiado em cada uma
+            das opções.
+          </p>
+
+          <div
+            id="feedback-manejo-orelhas"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              Essa forma pode machucar e assustar o Nupi. As orelhas
+              dos coelhos são sensíveis e nunca devem ser usadas para
+              levantar ou carregar o animal.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              observe qual opção mantém o corpo inteiro do Nupi apoiado.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-manejo-frente"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              Essa forma não oferece o apoio necessário. Se as patas
+              traseiras ficarem soltas, o Nupi pode se debater, cair
+              ou machucar a coluna e as pernas.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              observe qual opção sustenta tanto a parte da frente
+              quanto a parte traseira do corpo.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-manejo-correto"
+            class="feedback feedback-correto"
+            hidden
+          >
+
+            <h3>Muito bem!</h3>
+
+            <p>
+              O Nupi deve ser segurado com uma mão apoiando o peito
+              e a outra sustentando a parte traseira do corpo. Ele
+              também deve permanecer próximo ao corpo da pessoa para
+              se sentir mais seguro e não cair.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         DESAFIO 3 — AMBIENTE
+    ====================================================== -->
+
+    <section
+      id="desafio_03"
+      class="tela-desafio"
+      aria-labelledby="titulo-desafio-03"
+      aria-hidden="true"
+    >
+
+      <div class="informacoes-desafio">
+
+        <p class="identificacao-desafio">
+          Desafio 3 de 3
+        </p>
+
+        <h2 id="titulo-desafio-03">
+          Ambiente
+        </h2>
+
+        <p class="situacao-desafio">
+          O tutor está preparando o espaço onde o Nupi vai viver.
+          Entre as três opções abaixo, qual ambiente atende melhor
+          às necessidades dele?
+        </p>
+
+      </div>
+
+      <div
+        class="opcoes-desafio"
+        role="group"
+        aria-label="Escolha o ambiente adequado para Nupi"
+      >
+
+        <!-- Opção incorreta: gaiola pequena -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-ambiente-gaiola"
+          aria-label="Escolher gaiola pequena sem toca ou brinquedos"
+        >
+
+          <img
+            src="img/desafio_ambiente_gaiola.png"
+            alt="Coelho dentro de uma gaiola pequena sem toca ou brinquedos"
+          >
+
+          <span class="nome-opcao">
+            Gaiola pequena
+          </span>
+
+        </button>
+
+        <!-- Opção incorreta: ambiente perigoso -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="incorreta"
+          data-feedback="feedback-ambiente-perigoso"
+          aria-label="Escolher espaço aberto com barulho e objetos perigosos"
+        >
+
+          <img
+            src="img/desafio_ambiente_perigoso.png"
+            alt="Espaço com fios, barulho e objetos perigosos para o coelho"
+          >
+
+          <span class="nome-opcao">
+            Espaço sem proteção
+          </span>
+
+        </button>
+
+        <!-- Opção correta -->
+
+        <button
+          class="opcao-desafio"
+          type="button"
+          data-resposta="correta"
+          data-feedback="feedback-ambiente-correto"
+          aria-label="Escolher espaço amplo, seguro, com toca e brinquedos"
+        >
+
+          <img
+            src="img/desafio_ambiente_correto.png"
+            alt="Espaço amplo e seguro com toca e brinquedos próprios para coelhos"
+          >
+
+          <span class="nome-opcao">
+            Espaço amplo e seguro
+          </span>
+
+        </button>
+
+      </div>
+
+      <div class="mediacao-nupi">
+
+        <div class="nupi-personagem">
+
+          <img
+            class="imagem-nupi"
+            src="img/nupi_curioso.png"
+            alt="Nupi curioso, aguardando a resposta"
+          >
+
+        </div>
+
+        <div
+          class="area-feedback"
+          aria-live="polite"
+        >
+
+          <p class="mensagem-inicial">
+            Observe o espaço disponível, os objetos presentes e
+            onde o Nupi poderia se proteger.
+          </p>
+
+          <div
+            id="feedback-ambiente-gaiola"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              Esse espaço limita os movimentos do Nupi. Coelhos precisam
+              correr, explorar e se movimentar. A falta de uma toca também
+              pode fazer com que ele se sinta desprotegido quando estiver
+              com medo.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              procure um ambiente que ofereça espaço para se movimentar
+              e um lugar seguro para se esconder.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-ambiente-perigoso"
+            class="feedback feedback-incorreto"
+            hidden
+          >
+
+            <h3>Observe novamente</h3>
+
+            <p>
+              Esse ambiente não é seguro para o Nupi. O barulho excessivo
+              pode assustá-lo, e fios, produtos ou outros objetos perigosos
+              podem causar acidentes.
+            </p>
+
+            <p class="pista">
+              <strong>Pista:</strong>
+              procure um ambiente amplo, protegido, tranquilo e com um
+              local onde ele possa se esconder.
+            </p>
+
+          </div>
+
+          <div
+            id="feedback-ambiente-correto"
+            class="feedback feedback-correto"
+            hidden
+          >
+
+            <h3>Muito bem!</h3>
+
+            <p>
+              O Nupi precisa de um cercado amplo ou de um cômodo protegido,
+              onde possa correr e explorar com segurança. Uma toca oferece
+              abrigo quando ele estiver assustado, e brinquedos próprios
+              ajudam no enriquecimento do ambiente e no desgaste dos dentes.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =====================================================
+         CONTROLES
+    ====================================================== -->
+
+    <nav
+      class="controles controles-desafio"
+      aria-label="Navegação dos desafios"
+    >
+
+      <a
+        class="botao botao-navegacao link-botao"
+        href="index.html"
+      >
+        Voltar à jornada
+      </a>
+
+      <button
+        id="btn-voltar-desafio"
+        class="botao botao-navegacao"
+        type="button"
+        disabled
+      >
+        Voltar
+      </button>
+
+      <button
+        id="btn-avancar-desafio"
+        class="botao botao-desafio"
+        type="button"
+        disabled
+      >
+        Avançar
+      </button>
+
+    </nav>
+
+  </main>
+
+  <script src="desafio.js"></script>
+
+</body>
+
+</html>
