@@ -1,0 +1,524 @@
+/*
+  Estilos exclusivos da página natec.html.
+  As regras globais, a paleta, as fontes, o cabeçalho, os botões e as pegadas
+  são herdados do style.css para manter a identidade visual da Jornada do Nupi.
+*/
+
+/* Acessibilidade */
+
+.atalho-conteudo {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  padding: 12px 16px;
+  border: 3px solid var(--cor-verde);
+  border-radius: 10px;
+  color: var(--cor-fundo);
+  background-color: var(--cor-verde-escuro);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.atalho-conteudo:focus {
+  transform: translateY(0);
+}
+
+/* Estrutura geral */
+
+.conteudo-natec {
+  gap: 38px;
+}
+
+.natec-abertura,
+.secao-natec {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.natec-abertura {
+  display: flex;
+  justify-content: center;
+}
+
+.apresentacao-natec {
+  width: min(100%, 900px);
+}
+
+.apresentacao-natec .mensagem-continuidade {
+  max-width: 720px;
+  margin-top: 22px;
+  padding: 18px 20px;
+  border: 3px solid var(--cor-verde);
+  border-radius: 14px;
+  background-color: var(--cor-verde-claro);
+  font-weight: 500;
+}
+
+/* Cabeçalhos das seções */
+
+.cabecalho-secao {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.identificacao-etapa {
+  margin: 0;
+  color: var(--cor-roxo);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+}
+
+.cabecalho-secao h2,
+.texto-continuidade h2,
+.texto-encontro h2,
+.aviso-veterinario h2 {
+  margin: 8px 0 14px;
+  color: var(--cor-verde-escuro);
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.4rem, 2.6vw, 2rem);
+  line-height: 1.25;
+}
+
+.cabecalho-secao > p:last-child {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* Aprendizados */
+
+.grade-aprendizados,
+.grade-informacoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.card-natec,
+.card-informacao {
+  min-width: 0;
+  padding: 26px;
+  border-radius: 18px;
+}
+
+.card-natec h3,
+.card-informacao h3 {
+  margin: 0 0 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.card-natec p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.card-verde {
+  border: 3px solid var(--cor-verde);
+  color: var(--cor-verde-escuro);
+  background-color: var(--cor-verde-claro);
+  box-shadow: 5px 5px 0 var(--cor-verde);
+}
+
+.card-verde h3 {
+  color: var(--cor-verde-escuro);
+}
+
+.card-roxo {
+  border: 3px solid var(--cor-roxo);
+  color: var(--cor-roxo);
+  background-color: var(--cor-lilas);
+  box-shadow: 5px 5px 0 var(--cor-roxo-claro);
+}
+
+.card-roxo h3 {
+  color: var(--cor-roxo);
+}
+
+/* Continuidade da aprendizagem */
+
+.bloco-continuidade,
+.bloco-encontro,
+.bloco-creditos {
+  display: flex;
+  align-items: stretch;
+  gap: clamp(24px, 5vw, 64px);
+  padding: 30px;
+  border: 3px solid var(--cor-roxo);
+  border-radius: 20px;
+  background-color: var(--cor-lilas);
+  box-shadow: 8px 8px 0 var(--cor-roxo-claro);
+}
+
+.texto-continuidade,
+.texto-encontro {
+  flex: 1 1 60%;
+  min-width: 0;
+}
+
+.texto-continuidade p:not(.identificacao-etapa),
+.texto-encontro p:not(.identificacao-etapa) {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.texto-continuidade p + p {
+  margin-top: 16px;
+}
+
+.marca-natec {
+  display: flex;
+  flex: 0 1 360px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  padding: 28px;
+  border: 4px solid var(--cor-fundo);
+  border-radius: 16px;
+  color: var(--cor-fundo);
+  background-color: var(--cor-verde);
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--cor-verde-claro);
+}
+
+.marca-natec span {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.marca-natec small {
+  max-width: 270px;
+  margin-top: 14px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Informações institucionais */
+
+.card-informacao {
+  border: 3px solid var(--cor-verde);
+  color: var(--cor-verde-escuro);
+  background-color: var(--cor-fundo);
+  box-shadow: 5px 5px 0 var(--cor-verde-claro);
+}
+
+.card-informacao h3 {
+  color: var(--cor-verde);
+}
+
+.card-informacao dl,
+.dados-encontro {
+  margin: 0;
+}
+
+.card-informacao dl div,
+.dados-encontro div {
+  padding: 14px 0;
+  border-bottom: 3px solid var(--cor-lilas);
+}
+
+.card-informacao dl div:first-child,
+.dados-encontro div:first-child {
+  padding-top: 0;
+}
+
+.card-informacao dl div:last-child,
+.dados-encontro div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.card-informacao dt,
+.dados-encontro dt {
+  margin-bottom: 4px;
+  color: var(--cor-roxo);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.card-informacao dd,
+.dados-encontro dd {
+  margin: 0;
+  line-height: 1.45;
+}
+
+/* Encontro */
+
+.bloco-encontro {
+  border-color: var(--cor-verde);
+  background-color: var(--cor-verde-claro);
+  box-shadow: 8px 8px 0 var(--cor-verde);
+}
+
+.dados-encontro {
+  flex: 0 1 390px;
+  padding: 24px;
+  border: 3px solid var(--cor-roxo);
+  border-radius: 16px;
+  background-color: var(--cor-fundo);
+}
+
+/* Créditos */
+
+.bloco-creditos {
+  border-color: var(--cor-roxo);
+  background-color: var(--cor-fundo);
+}
+
+.lista-equipe,
+.dados-instituicao {
+  flex: 1 1 50%;
+}
+
+.lista-equipe {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-equipe li {
+  padding: 13px 0;
+  border-bottom: 3px solid var(--cor-lilas);
+  line-height: 1.45;
+}
+
+.lista-equipe li:first-child {
+  padding-top: 0;
+}
+
+.lista-equipe li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.lista-equipe strong,
+.dados-instituicao strong {
+  color: var(--cor-roxo);
+  font-family: "Montserrat", sans-serif;
+}
+
+.dados-instituicao {
+  padding: 24px;
+  border: 3px solid var(--cor-verde);
+  border-radius: 16px;
+  background-color: var(--cor-verde-claro);
+}
+
+.dados-instituicao p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dados-instituicao p + p {
+  margin-top: 12px;
+}
+
+/* Aviso */
+
+/* Participação das disciplinas */
+
+.bloco-disciplinas {
+  padding: 30px;
+  border: 3px solid var(--cor-roxo);
+  border-radius: 20px;
+  background-color: var(--cor-lilas);
+  box-shadow: 8px 8px 0 var(--cor-roxo-claro);
+}
+
+.cabecalho-disciplinas {
+  margin-bottom: 26px;
+}
+
+.cabecalho-disciplinas h2 {
+  margin-top: 0;
+}
+
+.texto-multidisciplinar {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1100px);
+  margin: 20px auto 0;
+  padding: 22px 26px;
+  border: 3px solid var(--cor-verde);
+  border-radius: 16px;
+  color: var(--cor-verde-escuro);
+  background-color: var(--cor-fundo);
+  box-shadow: 5px 5px 0 var(--cor-verde-claro);
+}
+
+.texto-multidisciplinar p {
+  max-width: none;
+  margin: 0;
+  font-size: 1.08rem;
+  line-height: 1.6;
+}
+
+.grade-disciplinas {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grade-disciplinas .card-informacao {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.aviso-veterinario {
+  padding: 26px;
+  border: 3px solid var(--cor-roxo);
+  border-radius: 18px;
+  background-color: var(--cor-lilas);
+  text-align: center;
+  box-shadow: 5px 5px 0 var(--cor-roxo-claro);
+}
+
+.aviso-veterinario h2 {
+  color: var(--cor-roxo);
+}
+
+.aviso-veterinario p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* Ações finais */
+
+.controles-finais {
+  margin-top: 0;
+  padding-top: 4px;
+}
+
+.link-botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Rodapé */
+
+.rodape-natec {
+  position: relative;
+  z-index: 1;
+  padding: 22px 24px;
+  border-top: 3px solid var(--cor-lilas);
+  color: var(--cor-verde-escuro);
+  background-color: var(--cor-fundo);
+  text-align: center;
+}
+
+.rodape-natec p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Tablets */
+
+@media (max-width: 1000px) {
+  .grade-aprendizados,
+  .grade-informacoes {
+    grid-template-columns: 1fr;
+  }
+
+  .card-natec,
+  .card-informacao {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .bloco-continuidade,
+  .bloco-encontro,
+  .bloco-creditos {
+    flex-direction: column;
+  }
+
+  .marca-natec,
+  .dados-encontro {
+    flex-basis: auto;
+    width: 100%;
+  }
+}
+
+/* Celulares */
+
+@media (max-width: 620px) {
+  .conteudo-natec {
+    gap: 28px;
+  }
+
+  .apresentacao-natec,
+  .card-natec,
+  .card-informacao,
+  .bloco-continuidade,
+  .bloco-encontro,
+  .bloco-creditos,
+  .aviso-veterinario {
+    padding: 20px;
+  }
+
+  .apresentacao-natec .mensagem-continuidade {
+    padding: 16px;
+  }
+
+  .grade-aprendizados,
+  .grade-informacoes {
+    gap: 20px;
+  }
+
+  .marca-natec {
+    min-height: 190px;
+    padding: 22px;
+  }
+
+  .dados-encontro,
+  .dados-instituicao {
+    padding: 18px;
+  }
+
+  .controles-finais .botao {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+
+/* Celulares muito pequenos */
+
+@media (max-width: 380px) {
+  .apresentacao-natec,
+  .card-natec,
+  .card-informacao,
+  .bloco-continuidade,
+  .bloco-encontro,
+  .bloco-creditos,
+  .aviso-veterinario {
+    padding: 16px;
+  }
+
+  .marca-natec span {
+    font-size: 2.5rem;
+  }
+}
