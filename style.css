@@ -557,3 +557,6 @@ header {
 .personagem-conteudo p {
   font-weight: 500;
 }
+.personagem-tutor .personagem-conteudo h3 {
+  color: var(--cor-verde-escuro);
+}
