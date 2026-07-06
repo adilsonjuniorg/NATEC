@@ -1,576 +1,1010 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0"
-  >
+  />
+
+  <title>NATEC | Jornada do Nupi</title>
 
   <meta
     name="description"
-    content="Site educativo sobre os cuidados necessários com coelhos."
-  >
+    content="Site educativo do NATEC com orientações sobre cuidados com coelhos, narrativa interativa, situações de cuidado do Nupi e informações sobre o projeto."
+  />
 
-  <meta
-    name="keywords"
-    content="coelho, cuidados, tutor, veterinária, Nupi"
-  >
-
-  <meta
-    name="author"
-    content="Adilson Júnior, Dandara Soares"
-  >
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
   <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@600;700&family=Roboto:wght@400;500&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&family=Roboto:wght@400;500;700&display=swap"
     rel="stylesheet"
-  >
+  />
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
-  <script src="sketch.js"></script>
-
-  <title>A Jornada do Nupi</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-
-  <header class="topo">
-    <h1>A Jornada do Nupi</h1>
-  </header>
-
-  <main class="conteudo">
-
-    <section
-      id="tela_00"
-      class="tela tela-inicial ativa"
-      aria-labelledby="titulo-tela-00"
+  <header class="site-header">
+    <a
+      class="brand"
+      href="#inicio"
+      aria-label="Ir para o início do site NATEC"
     >
-
-      <div class="apresentacao">
-
-        <p class="identificacao-etapa">
-          Início
-        </p>
-
-        <h2 id="titulo-tela-00">
-          Aprendendo a cuidar de um coelho com responsabilidade
-        </h2>
-
-        <p>
-          Nupi foi resgatado depois de viver em condições inadequadas.
-          Agora, seu novo tutor precisa aprender como oferecer a ele um
-          ambiente seguro, uma alimentação adequada e os cuidados necessários.
-        </p>
-
+      <span class="brand-mark-wrap" aria-hidden="true">
         <img
-          src="img/tela_inicial.png"
-          alt="Tutor segurando o coelho Nupi"
-          class="imagem-apresentacao"
-        >
+          src="assets/brand-rabbit.png"
+          alt=""
+          class="brand-mark"
+        />
+      </span>
 
-        <button
-          id="btn-comecar"
-          class="botao botao-comecar"
-          type="button"
-        >
-          Começar a jornada
-        </button>
-
+      <div class="brand-text">
+        <strong>NATEC</strong>
+        <small>Núcleo de Apoio à Tutores de Coelhos</small>
       </div>
+    </a>
 
-    </section>
-
-    <section
-      id="tela_01"
-      class="tela"
-      aria-labelledby="titulo-tela-01"
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="main-nav"
     >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 1 de 6
-        </p>
-
-        <h2 id="titulo-tela-01">
-          O resgate do Nupi
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_01.png"
-              alt="Tutor segurando o coelho Nupi"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Doutora, resgatei o Nupi faz alguns dias, mas ele vive
-              assustado. O antigo dono deixava ele preso numa gaiola muito
-              pequena e oferecia quase só cenoura.
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              Entendo. Vamos examiná-lo. Muita gente acredita que gaiola e
-              cenoura são suficientes, mas coelhos precisam de espaço,
-              segurança e uma alimentação adequada. Essas condições podem ter
-              contribuído para o medo e para os problemas de saúde dele.
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_01.png"
-              alt="Veterinária durante a consulta de Nupi"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section
-      id="tela_02"
-      class="tela"
-      aria-labelledby="titulo-tela-02"
-    >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 2 de 6
-        </p>
-
-        <h2 id="titulo-tela-02">
-          O ambiente
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_02.png"
-              alt="Tutor preocupado"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Sério? Eu achava que a cenoura era suficiente! O que eu preciso
-              mudar no ambiente dele?
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              O ideal é que ele tenha um espaço cercado ou um cômodo seguro
-              para correr e gastar energia. Quando fica assustado, o Nupi
-              costuma procurar algum lugar para se esconder?
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_02.png"
-              alt="Veterinária conversando com o tutor"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section
-      id="tela_03"
-      class="tela"
-      aria-labelledby="titulo-tela-03"
-    >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 3 de 6
-        </p>
-
-        <h2 id="titulo-tela-03">
-          Segurança e manejo
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_03.png"
-              alt="Tutor segurando o coelho Nupi"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Sim. Ele se encolhe num canto e parece não saber para onde ir.
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              Então prepare um cantinho calmo com uma toca para ele se
-              proteger. Coloque também brinquedos de madeira próprios para
-              coelhos. E, ao segurá-lo, apoie bem o corpo e não force quando
-              ele estiver com medo.
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_03.jpg"
-              alt="Veterinária explicando os cuidados com Nupi"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section
-      id="tela_04"
-      class="tela"
-      aria-labelledby="titulo-tela-04"
-    >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 4 de 6
-        </p>
-
-        <h2 id="titulo-tela-04">
-          A alimentação
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_04.png"
-              alt="Tutor segurando o coelho Nupi"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Caramba, faz sentido. Então a toca vai ajudar o Nupi a se sentir
-              seguro. E sobre a comida? O que eu dou no lugar da cenoura?
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              A base da alimentação deve ser o feno de capim, que precisa
-              ficar disponível o dia inteiro.
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_04.png"
-              alt="Veterinária explicando a alimentação de Nupi"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section
-      id="tela_05"
-      class="tela"
-      aria-labelledby="titulo-tela-05"
-    >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 5 de 6
-        </p>
-
-        <h2 id="titulo-tela-05">
-          Ração e vegetais
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_05.png"
-              alt="Tutor segurando o coelho Nupi"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Feno o dia todo? Mas e a ração?
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              A ração peletizada entra sim, mas em porções controladas.
-              Folhas verdes escuras, bem lavadas, podem complementar a
-              alimentação, e a cenoura deve ser oferecida apenas de vez em
-              quando.
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_05.png"
-              alt="Veterinária orientando o tutor sobre a alimentação"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-    <section
-      id="tela_06"
-      class="tela"
-      aria-labelledby="titulo-tela-06"
-    >
-
-      <div class="informacoes-etapa">
-
-        <p class="identificacao-etapa">
-          Etapa 6 de 6
-        </p>
-
-        <h2 id="titulo-tela-06">
-          Continuando a aprendizagem
-        </h2>
-
-      </div>
-
-      <div class="personagens">
-
-        <article class="personagem personagem-tutor">
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/tut_06.png"
-              alt="Tutor segurando o coelho Nupi"
-            >
-
-          </div>
-
-          <div class="personagem-conteudo">
-
-            <h3>Tutor:</h3>
-
-            <p>
-              Entendi: feno o dia inteiro, ração controlada e folhas verdes
-              para complementar. Caraca, eu estava fazendo muita coisa errada.
-              Como eu aprendo a cuidar dele direito para não vacilar mais?
-            </p>
-
-          </div>
-
-        </article>
-
-        <article class="personagem personagem-veterinaria">
-
-          <div class="personagem-conteudo">
-
-            <h3>Veterinária:</h3>
-
-            <p>
-              O segredo é continuar observando o Nupi, conversando com
-              profissionais e trocando experiências com outros tutores.
-              Inclusive, vai rolar o I Encontro de Tutores de Coelhos do
-              Ceará, aqui em Fortaleza. Antes disso, topa analisar algumas
-              situações e decidir como você cuidaria dele?
-            </p>
-
-          </div>
-
-          <div class="personagem-imagem">
-
-            <img
-              src="img/vet_06.png"
-              alt="Veterinária convidando o tutor para continuar aprendendo"
-            >
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
+      ☰
+    </button>
 
     <nav
-      class="controles"
-      aria-label="Navegação da história"
+      class="main-nav"
+      id="main-nav"
+      aria-label="Navegação principal"
     >
-
-      <button
-        id="btn-voltar"
-        class="botao botao-navegacao"
-        type="button"
-        disabled
-      >
-        Voltar
-      </button>
-
-      <button
-        id="btn-avancar"
-        class="botao botao-navegacao"
-        type="button"
-      >
-        Avançar
-      </button>
-
-      <button
-        id="btn-desafio"
-        class="botao botao-desafio"
-        type="button"
-        disabled
-      >
-        Desafio
-      </button>
-
+      <a href="#inicio" class="nav-link active">⌂ Início</a>
+      <a href="#sobre" class="nav-link">⌖ Sobre</a>
+      <a href="#evento" class="nav-link">✦ Evento</a>
+      <a href="#cuidados" class="nav-link">♧ Cuidados essenciais</a>
+      <a href="#jornada" class="nav-link">▣ Jornada do Nupi</a>
+      <a href="#situacoes" class="nav-link">◉ Situações de cuidado</a>
+      <a href="#contato" class="nav-link">✉ Contato</a>
     </nav>
+  </header>
 
+  <main>
+    <!-- INÍCIO -->
+    <section
+      id="inicio"
+      class="section hero-section"
+      aria-labelledby="hero-title"
+    >
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">
+            ♥ Informação que transforma cuidados em qualidade de vida
+          </span>
+
+          <h1 id="hero-title">
+            Cuidando melhor dos coelhos
+            <span>com informação e empatia</span>
+          </h1>
+
+          <p>
+            O NATEC apoia tutores com orientações acessíveis sobre
+            alimentação, ambiente, saúde e bem-estar dos coelhos,
+            reunindo conteúdo educativo e interação em uma experiência
+            simples de navegar.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#jornada">
+              Começar a jornada
+            </a>
+
+            <a class="btn btn-secondary" href="#cuidados">
+              Ver cuidados essenciais
+            </a>
+
+            <a class="btn btn-secondary" href="#evento">
+              Ver evento
+            </a>
+          </div>
+
+          <div class="event-inline-note">
+            <strong>Evento em destaque:</strong>
+
+            <span>
+              I Encontro de Tutores de Coelhos do Ceará · 26/09/2026
+            </span>
+          </div>
+        </div>
+
+        <figure
+          class="hero-art reveal"
+          aria-label="Ilustração do Nupi em ambiente seguro"
+        >
+          <img
+            src="assets/hero-nupi.png"
+            alt="Nupi em ambiente acolhedor com toca, ração, planta e cenoura"
+          />
+        </figure>
+      </div>
+
+      <div
+        class="container quick-cards"
+        aria-label="Principais temas do site"
+      >
+        <a href="#cuidados" class="quick-card">
+          <span aria-hidden="true">🥕</span>
+          <strong>Alimentação</strong>
+          <p>Feno, ração, água e alimentos oferecidos com equilíbrio.</p>
+        </a>
+
+        <a href="#cuidados" class="quick-card">
+          <span aria-hidden="true">⌂</span>
+          <strong>Ambiente</strong>
+          <p>Espaço, segurança, higiene e enriquecimento ambiental.</p>
+        </a>
+
+        <a href="#cuidados" class="quick-card">
+          <span aria-hidden="true">⚕</span>
+          <strong>Saúde</strong>
+          <p>Sinais de atenção e acompanhamento veterinário.</p>
+        </a>
+
+        <a href="#cuidados" class="quick-card">
+          <span aria-hidden="true">♡</span>
+          <strong>Bem-estar</strong>
+          <p>Rotina, vínculo, conforto e respeito ao tempo do coelho.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section
+      id="sobre"
+      class="section about-section"
+      aria-labelledby="about-title"
+    >
+      <div class="container two-column">
+        <div class="text-block reveal">
+          <span class="section-kicker">Sobre o projeto</span>
+
+          <h2 id="about-title">
+            Um site educativo com linguagem acolhedora
+          </h2>
+
+          <p>
+            Esta proposta organiza o conteúdo do NATEC em formato de
+            site. Primeiro, apresenta o projeto e orientações essenciais.
+            Depois, convida o tutor a aprender por meio da história e das
+            situações de cuidado do Nupi.
+          </p>
+
+          <p>
+            A Jornada do Nupi e as situações de cuidado funcionam como
+            recursos interativos, permitindo observar diferentes ações,
+            suas consequências e as necessidades do coelho de forma
+            visual, leve e fácil de compreender.
+          </p>
+        </div>
+
+        <article class="about-card reveal">
+          <img
+            src="assets/tutor-feliz.png"
+            alt="Tutor feliz após aprender sobre os cuidados com o Nupi"
+            loading="lazy"
+          />
+
+          <div>
+            <strong>Objetivo da experiência</strong>
+
+            <p>
+              Transformar informações sobre manejo e bem-estar em uma
+              experiência clara, útil e acolhedora para tutores de
+              coelhos.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- EVENTO -->
+    <section
+      id="evento"
+      class="section event-section"
+      aria-labelledby="event-title"
+    >
+      <div class="container event-grid">
+        <div class="event-copy reveal">
+          <span class="section-kicker">Convite para o evento</span>
+
+          <h2 id="event-title">
+            I Encontro de Tutores de Coelhos do Ceará
+          </h2>
+
+          <p>
+            O NATEC também promove momentos de encontro, troca e
+            formação. Confira as informações divulgadas sobre o primeiro
+            lote do evento.
+          </p>
+
+          <div class="event-highlights">
+            <article class="event-pill">
+              <span aria-hidden="true">📅</span>
+
+              <div>
+                <strong>Data do evento</strong>
+                <p>26/09/2026</p>
+              </div>
+            </article>
+
+            <article class="event-pill">
+              <span aria-hidden="true">💰</span>
+
+              <div>
+                <strong>Investimento</strong>
+                <p>R$ 45,00</p>
+              </div>
+            </article>
+
+            <article class="event-pill">
+              <span aria-hidden="true">⏳</span>
+
+              <div>
+                <strong>1º lote até</strong>
+                <p>30/06</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="event-detail-card">
+            <strong>O evento contará com:</strong>
+
+            <ul>
+              <li>Palestras;</li>
+              <li>Kits para participantes;</li>
+              <li>Coffee break;</li>
+              <li>Sorteios;</li>
+              <li>Oficinas.</li>
+            </ul>
+
+            <p>
+              Será um dia de aprendizado, troca de experiências e
+              conexão entre tutores, profissionais e pessoas
+              interessadas no bem-estar dos coelhos.
+            </p>
+          </div>
+
+          <div class="event-actions">
+            <a
+              class="btn btn-primary"
+              href="https://www.instagram.com/natec.ufc?igsh=a2lrODVhN2JuYm42"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir link na bio
+            </a>
+
+            <button
+              class="btn btn-secondary"
+              type="button"
+              id="copy-instagram-event"
+            >
+              Copiar @natec.ufc
+            </button>
+          </div>
+
+          <p
+            class="copy-status"
+            id="copy-status-event"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div class="event-gallery reveal">
+          <div
+            class="event-carousel"
+            id="event-carousel"
+            aria-label="Imagens de divulgação do evento"
+          >
+            <figure
+              class="event-slide active"
+              data-event-slide="0"
+            >
+              <img
+                src="assets/evento-lote-1.jpg"
+                alt="Convite do primeiro lote do I Encontro de Tutores de Coelhos do Ceará"
+                loading="lazy"
+              />
+
+              <figcaption>
+                Informações sobre a data, o valor e o período do
+                primeiro lote.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="event-slide"
+              data-event-slide="1"
+              hidden
+            >
+              <img
+                src="assets/evento-lote-2.jpg"
+                alt="Publicação do evento apresentando palestras, kits, coffee break, sorteios e oficinas"
+                loading="lazy"
+              />
+
+              <figcaption>
+                Atividades e experiências previstas para o evento.
+              </figcaption>
+            </figure>
+          </div>
+
+          <div
+            class="event-carousel-controls"
+            aria-label="Controles das imagens do evento"
+          >
+            <button
+              type="button"
+              class="carousel-button"
+              id="event-prev"
+              aria-label="Ver imagem anterior"
+            >
+              ←
+            </button>
+
+            <span
+              class="carousel-status"
+              id="event-slide-status"
+              aria-live="polite"
+            >
+              1 de 2
+            </span>
+
+            <button
+              type="button"
+              class="carousel-button"
+              id="event-next"
+              aria-label="Ver próxima imagem"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUIDADOS ESSENCIAIS -->
+    <section
+      id="cuidados"
+      class="section care-section"
+      aria-labelledby="care-title"
+    >
+      <div class="container section-head">
+        <div class="reveal">
+          <span class="section-kicker">Cuidados essenciais</span>
+
+          <h2 id="care-title">
+            O básico bem explicado faz diferença na vida do coelho
+          </h2>
+
+          <p>
+            Pequenos cuidados diários contribuem para a saúde, a
+            segurança e o bem-estar. Os cards abaixo resumem pontos
+            importantes para orientar o tutor no cotidiano.
+          </p>
+        </div>
+
+        <img
+          src="assets/hero-nupi.png"
+          alt="Nupi em ambiente seguro com toca e alimentação"
+          class="care-hero-img reveal"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="container care-grid">
+        <article class="care-card reveal">
+          <span class="card-icon" aria-hidden="true">🥕</span>
+
+          <h3>Alimentação</h3>
+
+          <ul>
+            <li>Feno de capim disponível durante todo o dia.</li>
+            <li>Ração de qualidade em porções controladas.</li>
+            <li>Folhas verdes lavadas e oferecidas adequadamente.</li>
+            <li>Água limpa sempre acessível.</li>
+            <li>Cenoura apenas como petisco ocasional.</li>
+          </ul>
+        </article>
+
+        <article class="care-card reveal">
+          <span class="card-icon" aria-hidden="true">⌂</span>
+
+          <h3>Ambiente</h3>
+
+          <ul>
+            <li>Espaço seguro para correr e se movimentar.</li>
+            <li>Tocas e esconderijos para reduzir o estresse.</li>
+            <li>Piso confortável e protegido.</li>
+            <li>Brinquedos próprios para roer e explorar.</li>
+            <li>Higiene regular do espaço.</li>
+          </ul>
+        </article>
+
+        <article class="care-card reveal">
+          <span class="card-icon" aria-hidden="true">⚕</span>
+
+          <h3>Saúde</h3>
+
+          <ul>
+            <li>Observe o apetite, as fezes e o comportamento.</li>
+            <li>Procure um veterinário ao notar alterações.</li>
+            <li>Mantenha os cuidados preventivos em dia.</li>
+            <li>Evite oferecer medicamentos sem orientação.</li>
+          </ul>
+        </article>
+
+        <article class="care-card reveal">
+          <span class="card-icon" aria-hidden="true">♡</span>
+
+          <h3>Bem-estar</h3>
+
+          <ul>
+            <li>Mantenha uma rotina tranquila e previsível.</li>
+            <li>Respeite o tempo e os limites do coelho.</li>
+            <li>Evite barulhos intensos e aproximações bruscas.</li>
+            <li>Ofereça interação e enriquecimento ambiental.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="container myths-layout">
+        <div class="myths-intro reveal">
+          <span class="circle-question" aria-hidden="true">?</span>
+
+          <h3>Mitos comuns</h3>
+
+          <p>
+            Algumas ideias populares podem prejudicar o manejo. O site
+            apresenta informações que ajudam a observar esses mitos com
+            mais atenção.
+          </p>
+        </div>
+
+        <div class="myth-cards">
+          <article class="myth-card reveal">
+            <span class="myth-label wrong">✕ MITO</span>
+
+            <strong>Coelho vive bem em gaiola.</strong>
+
+            <span class="myth-label right">✓ INFORMAÇÃO</span>
+
+            <p>
+              Coelhos precisam de espaço para se movimentar, explorar e
+              expressar comportamentos naturais.
+            </p>
+          </article>
+
+          <article class="myth-card reveal">
+            <span class="myth-label wrong">✕ MITO</span>
+
+            <strong>Cenoura pode ser a base da alimentação.</strong>
+
+            <span class="myth-label right">✓ INFORMAÇÃO</span>
+
+            <p>
+              A cenoura deve ser oferecida apenas como petisco. A base
+              da alimentação deve ser o feno de capim.
+            </p>
+          </article>
+
+          <article class="myth-card reveal">
+            <span class="myth-label wrong">✕ MITO</span>
+
+            <strong>Coelho não precisa de acompanhamento.</strong>
+
+            <span class="myth-label right">✓ INFORMAÇÃO</span>
+
+            <p>
+              A orientação veterinária especializada contribui para a
+              prevenção e para a qualidade de vida do animal.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- JORNADA DO NUPI -->
+    <section
+      id="jornada"
+      class="section journey-section"
+      aria-labelledby="journey-title"
+    >
+      <div class="container journey-top">
+        <div class="reveal">
+          <span class="section-kicker">Jornada interativa</span>
+
+          <h2 id="journey-title">A Jornada do Nupi</h2>
+
+          <p>
+            Acompanhe a história do Nupi e observe, etapa por etapa,
+            como mudanças na alimentação, no ambiente e na rotina podem
+            contribuir para seu bem-estar.
+          </p>
+        </div>
+
+        <div class="progress-card reveal" aria-live="polite">
+          <span class="progress-icon" aria-hidden="true">⚑</span>
+
+          <div>
+            <strong id="journey-progress-title">
+              Etapa 1 de 3
+            </strong>
+
+            <p>
+              Você está em:
+              <b id="journey-current-name">Resgate</b>
+            </p>
+
+            <div
+              class="step-dots"
+              aria-label="Progresso da Jornada do Nupi"
+            >
+              <span class="dot active" aria-hidden="true"></span>
+              <span class="dot" aria-hidden="true"></span>
+              <span class="dot" aria-hidden="true"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container journey-layout">
+        <div class="dialogue-column">
+          <article class="dialogue-card tutor-card reveal">
+            <img
+              src="assets/story-tutor.png"
+              alt="Tutor conversando sobre o resgate do Nupi"
+              loading="lazy"
+            />
+
+            <div>
+              <h3>Tutor:</h3>
+
+              <p id="tutor-text">
+                Doutora, resgatei o Nupi faz uns dias, mas ele vive
+                assustado. O antigo dono deixava ele trancado numa
+                gaiola minúscula e só dava cenoura.
+              </p>
+            </div>
+
+            <button
+              class="audio-button"
+              type="button"
+              data-speak-target="tutor-text"
+              aria-label="Ouvir fala do tutor"
+            >
+              🔊
+            </button>
+          </article>
+
+          <article class="dialogue-card vet-card reveal">
+            <img
+              src="assets/story-vet.png"
+              alt="Veterinária orientando o tutor"
+              loading="lazy"
+            />
+
+            <div>
+              <h3>Veterinária:</h3>
+
+              <p id="vet-text">
+                Calma, vamos examiná-lo. O pessoal cai muito nesses
+                mitos e acha que coelho é bicho de pelúcia. Gaiola
+                estressa muito o animal e cenoura direto faz mal. É por
+                isso que ele cresceu doente e com medo de tudo.
+              </p>
+            </div>
+
+            <button
+              class="audio-button"
+              type="button"
+              data-speak-target="vet-text"
+              aria-label="Ouvir fala da veterinária"
+            >
+              🔊
+            </button>
+          </article>
+        </div>
+
+        <aside
+          class="journey-sidebar reveal"
+          aria-label="Etapas da Jornada do Nupi"
+        >
+          <div class="step-list" id="journey-steps">
+            <button
+              type="button"
+              class="step-item active"
+              data-step="0"
+            >
+              <span>1</span>
+
+              <b>Resgate</b>
+
+              <small>
+                Primeiros cuidados e observação do comportamento.
+              </small>
+            </button>
+
+            <button
+              type="button"
+              class="step-item"
+              data-step="1"
+            >
+              <span>2</span>
+
+              <b>Cuidados</b>
+
+              <small>
+                Alimentação, ambiente e manejo adequado.
+              </small>
+            </button>
+
+            <button
+              type="button"
+              class="step-item"
+              data-step="2"
+            >
+              <span>3</span>
+
+              <b>Nova rotina</b>
+
+              <small>
+                Adaptação, confiança e bem-estar.
+              </small>
+            </button>
+          </div>
+
+          <img
+            src="assets/nupi-thinking.png"
+            alt="Nupi observando e refletindo sobre os cuidados"
+            class="sidebar-nupi"
+            loading="lazy"
+          />
+
+          <div class="learning-box">
+            <span aria-hidden="true">💡</span>
+
+            <div>
+              <strong>Aprendizado desta etapa</strong>
+
+              <p id="learning-text">
+                No resgate, o coelho precisa de segurança, alimentação
+                adequada e um ambiente tranquilo para reduzir o
+                estresse.
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container journey-actions reveal">
+        <button
+          class="btn btn-secondary"
+          type="button"
+          id="prev-step"
+        >
+          ← Voltar
+        </button>
+
+        <p>♥ Cada cuidado faz diferença na vida do Nupi.</p>
+
+        <button
+          class="btn btn-primary"
+          type="button"
+          id="next-step"
+        >
+          Próxima etapa →
+        </button>
+
+        <a class="btn btn-secondary" href="#situacoes">
+          Explorar situações
+        </a>
+      </div>
+    </section>
+
+    <!-- SITUAÇÕES DE CUIDADO -->
+    <section
+      id="situacoes"
+      class="section situations-section"
+      aria-labelledby="situations-title"
+    >
+      <div class="container situations-page">
+        <div class="situations-intro reveal">
+          <span
+            class="situations-mark"
+            aria-hidden="true"
+          >
+            ◉
+          </span>
+
+          <div>
+            <span class="section-kicker">
+              Observação e reflexão
+            </span>
+
+            <h2 id="situations-title">
+              Situações de Cuidado do Nupi
+            </h2>
+
+            <p>
+              Explore cada imagem para observar o que acontece em
+              diferentes situações. Não existem respostas certas ou
+              erradas: cada escolha apresenta uma consequência e ajuda
+              a compreender o cenário como um todo.
+            </p>
+          </div>
+        </div>
+
+        <div class="situations-layout">
+          <aside
+            class="nupi-mediation reveal"
+            aria-live="polite"
+          >
+            <img
+              src="assets/nupi-thinking.png"
+              alt="Nupi observando as situações de cuidado"
+              id="mediator-image"
+              loading="lazy"
+            />
+
+            <div class="mediation-card">
+              <strong id="mediator-title">
+                Orientação do Nupi
+              </strong>
+
+              <p id="mediator-text">
+                Observe cada cena com atenção. Ao explorar todas as
+                imagens, você poderá comparar as consequências e
+                compreender o cenário completo.
+              </p>
+            </div>
+          </aside>
+
+          <div class="situations-card reveal">
+            <div class="situations-progress">
+              <span id="scenario-category">
+                🥕 Cenário 1 de 3 – Alimentação
+              </span>
+
+              <b id="observed-count">
+                0 de 3 observadas
+              </b>
+
+              <div
+                class="bar"
+                role="progressbar"
+                aria-label="Progresso das situações observadas"
+                aria-valuemin="0"
+                aria-valuemax="3"
+                aria-valuenow="0"
+              >
+                <span id="situations-bar"></span>
+              </div>
+            </div>
+
+            <div class="situation-row">
+              <span
+                class="situation-number"
+                id="scenario-number"
+                aria-hidden="true"
+              >
+                1
+              </span>
+
+              <div>
+                <h3 id="scenario-text">
+                  O Tutor está organizando a alimentação do Nupi.
+                  Observe as três situações e descubra o que acontece em
+                  cada uma delas.
+                </h3>
+
+                <p>
+                  ⓘ Clique em cada imagem. As situações já observadas
+                  permanecerão marcadas.
+                </p>
+              </div>
+            </div>
+
+            <!--
+              As opções serão inseridas pelo script.js.
+
+              Alimentação:
+              option-cenoura.jpg
+              option-feno.jpg
+              option-racao.jpg
+
+              Manejo:
+              option-rapido.jpg
+              option-seguro.jpg
+              option-esperar.jpg
+
+              Ambiente:
+              option-gaiola.jpg
+              option-barulho.jpg
+              hero-nupi.png
+            -->
+
+            <div
+              class="situations-options-grid"
+              id="situations-options"
+              aria-label="Situações disponíveis para observação"
+            ></div>
+
+            <div class="situation-feedback-grid">
+              <div
+                class="consequence-box"
+                id="consequence-box"
+                aria-live="polite"
+              >
+                <strong>Observe uma situação.</strong>
+
+                <p>
+                  A consequência da cena escolhida será apresentada
+                  aqui.
+                </p>
+              </div>
+
+              <div
+                class="observation-box"
+                id="observation-box"
+              >
+                <strong>◉ O que observar</strong>
+
+                <p>
+                  Compare o alimento oferecido, a frequência e os
+                  efeitos que cada situação pode trazer para a rotina
+                  do Nupi.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="situation-summary"
+              id="situation-summary"
+              aria-live="polite"
+              hidden
+            >
+              <span class="summary-label">
+                Visão do todo
+              </span>
+
+              <h3 id="summary-title">
+                O cenário completo
+              </h3>
+
+              <p id="summary-text"></p>
+            </div>
+
+            <div class="situations-actions">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                id="review-scenario"
+              >
+                ↻ Rever este cenário
+              </button>
+
+              <button
+                class="btn btn-primary"
+                type="button"
+                id="next-scenario"
+                disabled
+              >
+                Ver o cenário completo →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section
+      id="contato"
+      class="section contact-section"
+      aria-labelledby="contact-title"
+    >
+      <div class="container contact-card reveal">
+        <div>
+          <span class="section-kicker">Contato</span>
+
+          <h2 id="contact-title">
+            Continue acompanhando o NATEC
+          </h2>
+
+          <p>
+            Para acompanhar as atividades, eventos e orientações
+            divulgadas pelo projeto, acesse o perfil público do NATEC
+            no Instagram.
+          </p>
+
+          <div class="contact-actions">
+            <a
+              class="btn btn-primary"
+              href="https://www.instagram.com/natec.ufc?igsh=a2lrODVhN2JuYm42"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir Instagram @natec.ufc
+            </a>
+
+            <button
+              class="btn btn-secondary"
+              type="button"
+              id="copy-instagram"
+            >
+              Copiar @natec.ufc
+            </button>
+          </div>
+
+          <p
+            class="copy-status"
+            id="copy-status"
+            aria-live="polite"
+          ></p>
+        </div>
+
+        <div class="source-box">
+          <strong>Aviso educativo</strong>
+
+          <p>
+            As informações deste site têm caráter educativo e não
+            substituem a orientação de um médico-veterinário.
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
-</body>
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img
+          src="assets/brand-rabbit.png"
+          alt=""
+          class="footer-brand-mark"
+          loading="lazy"
+        />
 
+        <div>
+          <strong>NATEC</strong>
+          <small>Núcleo de Apoio à Tutores de Coelhos</small>
+        </div>
+      </div>
+
+      <p>
+        Projeto de extensão universitária com foco em educação,
+        bem-estar animal e apoio à comunidade de tutores de coelhos.
+      </p>
+
+      <a
+        href="https://www.instagram.com/natec.ufc?igsh=a2lrODVhN2JuYm42"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram: @natec.ufc
+      </a>
+
+      <p class="disclaimer">
+        As informações deste site têm caráter educativo e não substituem
+        a orientação de um médico-veterinário.
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
